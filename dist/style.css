@@ -85,6 +85,50 @@ nav .icons .active p {
   color: #1eafdd;
 }
 
+.content {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content .line {
+  display: flex;
+  align-items: center;
+  max-width: 700px;
+}
+
+@media screen and (max-width: 900px) {
+  .content .line {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.content .line .article {
+  padding: 2%;
+}
+
+.content .line .article p {
+  text-align: justify;
+}
+
+.content .line img {
+  width: 50%;
+  height: 50%;
+}
+
+.content .right {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 900px) {
+  .content .right {
+    flex-direction: column;
+  }
+}
+
 .footer {
   width: 96%;
   background-color: #45485b;
