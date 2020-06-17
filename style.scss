@@ -59,6 +59,7 @@ nav {
       .icon {
         padding-right: 50px;
       }
+
       i {
         display: none;
       }
@@ -89,12 +90,46 @@ nav {
   }
 }
 
+.content {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .line {
+    display: flex;
+    align-items: center;
+    max-width: $small;
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .article {
+      padding: 2%;
+      p {
+        text-align: justify;
+      }
+    }
+
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  .right {
+    flex-direction: row-reverse;
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+  }
+}
 .footer {
   width: 96%;
   background-color: #45485b;
   padding: 2%;
-  @media screen and (max-width: $medium) {
-  }
 
   .title {
     height: 75px;
