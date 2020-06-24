@@ -1,11 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-//Breakpoints
-$xsmall: 370px;
-$small: 700px;
-$medium: 1080px;
-$large: 1400px;
-$xlarge: 1900px;
+@import "./include/sizes";
+@import "./include/colors";
+@import "./include/mixins";
 
 html,
 body {
@@ -73,8 +69,8 @@ nav {
 
     .icon {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
 
       p,
       span {
@@ -94,8 +90,8 @@ nav {
   width: 100%;
   background-color: white;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 
   .line {
     display: flex;
@@ -110,6 +106,9 @@ nav {
       padding: 2%;
       p {
         text-align: justify;
+      }
+      .btn {
+        @include btn_style();
       }
     }
 
@@ -126,9 +125,10 @@ nav {
     }
   }
 }
+
 .footer {
   width: 96%;
-  background-color: #45485b;
+  background-color: $nav_color;
   padding: 2%;
 
   .title {
@@ -136,7 +136,7 @@ nav {
 
     h2 {
       text-align: center;
-      color: white;
+      color: $white;
       font-weight: bold;
     }
   }
@@ -152,7 +152,7 @@ nav {
     }
 
     @media screen and (max-width: 900px) {
-      height: 1050px;
+      height: $medium;
       flex-direction: column;
       align-items: center;
     }
@@ -169,16 +169,16 @@ nav {
     .middle_l,
     .middle_r {
       .title {
-        color: white;
+        color: $white;
         font-weight: bold;
       }
 
       .text {
-        color: grey;
+        color: $grey;
       }
 
       .link {
-        color: #d6d05e;
+        color: $links;
       }
     }
 
@@ -188,15 +188,15 @@ nav {
       }
 
       .up {
-        color: white;
+        color: $white;
       }
       .time {
         font-size: 10px;
-        color: grey;
+        color: $grey;
       }
 
       .link {
-        color: #d6d05e;
+        color: $links;
       }
     }
   }
@@ -207,25 +207,25 @@ nav {
 
     .left {
       p {
-        color: white;
+        color: $white;
       }
       i {
-        color: blue;
+        color: $blue;
       }
     }
 
     .right {
-      color: grey;
+      color: $grey;
     }
   }
 
   .line {
-    border: 1px solid grey;
+    border: 1px solid $grey;
   }
 
   .bottom {
     height: 75px;
-    color: grey;
+    color: $grey;
     display: flex;
     align-items: center;
   }
