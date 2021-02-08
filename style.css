@@ -148,6 +148,7 @@ nav .icons .active p {
 .content .line img {
   width: 50%;
   height: 50%;
+  border-radius: 100%;
 }
 .content .right {
   -webkit-box-orient: horizontal;
